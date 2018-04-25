@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class CarModels {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
     private String brand;
     private String model;
     private Integer year;
@@ -15,7 +15,7 @@ public class CarModels {
     private Long fuel_consumption;
     private String fuel_type;
 
-    public CarModels(int id, String brand, String model, Integer year,
+    public CarModels(Long id, String brand, String model, Integer year,
                      String engine, Long fuel_consumption, String fuel_type) {
         this.id = id;
         this.brand = brand;
@@ -41,7 +41,7 @@ public class CarModels {
         return year;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
@@ -73,7 +73,7 @@ public class CarModels {
        year = year;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
